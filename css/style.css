@@ -1,0 +1,21 @@
+body{
+    background:url(../img/board.png)
+}
+
+h1{
+    color: chartreuse;
+    text-align: center;
+    background-color: red;
+    font-size: 40px;
+}
+/* .dice-container{
+ color: aliceblue;
+ width: 150px;
+ height: 150px;
+}
+.place-holder{
+    background-color: white;
+    width: 100px;
+    display: flex;
+    align-self: baseline;
+} */
