@@ -1,5 +1,11 @@
 body{
-    background:url(../img/board.png)
+    background:url(../img/table.png);
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: center;
+    background-color: rgb(36, 34, 34);
+    /* width: 900px;
+    height: 900px; */
 }
 
 h1{
@@ -8,14 +14,42 @@ h1{
     background-color: red;
     font-size: 40px;
 }
-/* .dice-container{
- color: aliceblue;
- width: 150px;
- height: 150px;
+
+.board img{
+    border: white solid 3px;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    box-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 20px black;
+    position: sticky;
 }
-.place-holder{
-    background-color: white;
-    width: 100px;
+.board{
+    margin-top: 15em;
+}
+.blue-piece img{
+    width: 50px;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    shadow: 1px 1px 2px white, 0 0 25px white, 0 0 20px white;
+    position: sticky;
+    z-index: 3;
+
+    
+}
+.dice-container{
+    position: absolute;
     display: flex;
-    align-self: baseline;
-} */
+    flex-direction: column;
+}
+.dice img{
+    
+    width: 100px;
+    height:100px;
+}
+
+
+
