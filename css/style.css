@@ -7,12 +7,22 @@ body{
     /* width: 900px;
     height: 900px; */
 }
-
+header{
+    background-color: red;
+}
 h1{
     color: chartreuse;
     text-align: center;
-    background-color: red;
+   
     font-size: 40px;
+}
+label{
+    color: chartreuse;
+    al
+    background-color: red;
+}
+form {
+text-align: center;
 }
 
 .board img{
@@ -50,6 +60,25 @@ h1{
     
     width: 100px;
     height:100px;
+}
+.results{
+    width: 50%;
+    height: 25%;
+    background-color: white;
+    border: solid black 3px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+section .results{
+    margin: 3em;
+}
+
+h2{
+    font-size: 20px;
+    color:red;
+    font-weight: bold;
+    text-align: center;
 }
 
 

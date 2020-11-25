@@ -19,11 +19,19 @@ let dice8 = document.querySelector('.d8')
 let dice10 = document.querySelector('.d10')
 let dice20 = document.querySelector('.d20')
 
+//submit name inside JS: document write inside .result section
+
+//Dice rolls inside .result section
+// getElementByID
+//document.write()
+
+
 dice4.addEventListener('click', function(){
     console.log('dice4')
     let rollDice4 = function(){
         let randomOne = 1 + Math.floor(Math.random()* 4)
         console.log(rollDice4(1))
+        
 
     }
 
