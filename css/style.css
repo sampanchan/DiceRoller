@@ -81,5 +81,36 @@ h2{
     text-align: center;
 }
 
+.diceResult4{
+    color: blue;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+.diceResult6{
+    color: green;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+.diceResult8{
+    color: orange;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+.diceResult10{
+    color: purple;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+.diceResult20{
+    color: darkred;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
 
 

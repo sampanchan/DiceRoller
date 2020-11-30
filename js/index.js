@@ -23,18 +23,21 @@ let dice20 = document.querySelector('.d20')
 
 //Dice rolls inside .result section
 // getElementByID
-//document.write()
+//"element".innerHtml()
 
 
 dice4.addEventListener('click', function(){
     console.log('dice4')
     let rollDice4 = function(){
         let randomOne = 1 + Math.floor(Math.random()* 4)
-        console.log(rollDice4(1))
+        return randomOne
         
 
     }
-
+    console.log(rollDice4(1))
+    let dFour = document.querySelector('.diceResult4')
+    dFour.innerHTML= 'you rolled a ' + rollDice4(1)
+    
 })
 
 
@@ -43,9 +46,13 @@ dice6.addEventListener('click', function(){
     console.log('dice6')
     let rollDice6 = function(){
         let randomTwo = 1 + Math.floor(Math.random()* 6)
-        console.log(rollDice6(1))
+        return randomTwo
 
     }
+    console.log(rollDice6(1))
+    let dSix = document.querySelector('.diceResult6')
+    dSix.innerHTML= 'you rolled a ' + rollDice6(1)
+
 })
 
 
@@ -54,9 +61,12 @@ dice8.addEventListener('click', function(){
     console.log('dice8')
     let rollDice8 = function(){
         let randomThree = 1 + Math.floor(Math.random()* 8)
-        console.log(rollDice8(1))
+        return randomThree
 
     }
+    console.log(rollDice8(1))
+    let dEight = document.querySelector('.diceResult8')
+    dEight.innerHTML= 'you rolled a ' + rollDice8(1)
 })
 
 
@@ -65,9 +75,12 @@ dice10.addEventListener('click', function(){
     console.log('dice10')
     let rollDice10 = function(){
         let randomFour = 1 + Math.floor(Math.random()* 10)
-        console.log(rollDice10(1))
-
+        return randomFour
+        
     }
+    console.log(rollDice10(1))
+    let dTen = document.querySelector('.diceResult10')
+    dTen.innerHTML= 'you rolled a ' + rollDice10(1)
 })
 
 
@@ -76,7 +89,11 @@ dice20.addEventListener('click', function(){
     console.log('dice20')
     let rollDice20 = function(){
         let randomFive = 1 + Math.floor(Math.random()* 20)
-        console.log(rollDice20(1))
+        return randomFive
 
     }
+    console.log(rollDice20(1))
+    let dTwenty = document.querySelector('.diceResult20')
+    dTwenty.innerHTML= 'you rolled a ' + rollDice20(1)
+
 })
