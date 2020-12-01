@@ -1,14 +1,31 @@
 body{
-    background:url(../img/table.png);
+    background:url(../img/diceRollBackground.png);
     background-repeat: no-repeat;
-    background-size: 800px;
+    background-size: cover;
     background-position: center;
-    background-color: rgb(36, 34, 34);
-    /* width: 900px;
-    height: 900px; */
+   
+    /* background-color: rgb(36, 34, 34); */
 }
+/* @media screen and (min-width:768px){
+    .dice img{
+        width: 100px;
+        height:100px;
+    }
+}
+@media screen and (min-width:1400px){
+    .dice img{
+        width: 100px;
+        height:100px;
+    }
+} */
 header{
+    position: fixed;
+    width: 100%;
     background-color: red;
+}
+header p{
+    color: chartreuse;
+    text-align: center;
 }
 h1{
     color: chartreuse;
@@ -18,14 +35,15 @@ h1{
 }
 label{
     color: chartreuse;
-    al
     background-color: red;
+   
 }
 form {
 text-align: center;
+
 }
 
-.board img{
+/* .board img{
     border: white solid 3px;
     width: 500px;
     height: 500px;
@@ -38,7 +56,7 @@ text-align: center;
 }
 .board{
     margin-top: 15em;
-}
+} */
 .blue-piece img{
     width: 50px;
     height: 100px;
@@ -51,34 +69,65 @@ text-align: center;
 
     
 }
+.dice-split{
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dice-split .results{
+    /* align-content: right; */
+}
 .dice-container{
-    position: absolute;
+    /* position: absolute; */
     display: flex;
     flex-direction: column;
+    background-color: #191818;
+    padding: 1em;
+    /* margin-left: 2em; */
+    /* margin-top: 8em; */
+    border-radius: 12px;
+    margin-left: 20px;;
 }
 .dice img{
-    
     width: 100px;
-    height:100px;
+    height: 100px;
 }
 .results{
-    width: 50%;
-    height: 25%;
+    /* width: 50%; */
+    min-height: 200px;
+    padding: 20px;;
     background-color: white;
     border: solid black 3px;
     border-radius: 10px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin-right: 20px;;
+    
 }
 
-section .results{
-    margin: 3em;
+section.results{
+    overflow: scroll;
+    /* margin: 3em; */
 }
 
 h2{
-    font-size: 20px;
+    font-size: 38px;
     color:red;
     font-weight: bold;
     text-align: center;
+}
+
+ul.roll-results {
+}
+
+ul.roll-results li:first-child {
+    opacity: 1;
+    font-size: 1.4em;
+    
+
+}
+ul.roll-results li {
+    opacity: 0.5;
 }
 
 .diceResult4{
@@ -111,6 +160,18 @@ h2{
     font-weight: bold;
     text-align: center;
 }
+.animation{
+    animation: rotation 1s infinite linear;
+    
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
 
 
 

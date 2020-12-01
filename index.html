@@ -4,72 +4,56 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/style.css">
-        <title>Document</title>
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dice Roller</title>
     </head>
     <body>
         <header>
             <h1>Roll The Dice</h1>
+            <p>Instructions</p>
+            <p>Click on the Dice to the left.</p>
+            <p>Watch your rolls, roll.</p>
             <form>
                 <label>Type your name:</label>
                 <input type="text" id="name" name="name">
-                <input type="submit" value="Submit">
             </form>
         </header>
         <section class="game">
-            <div class="board">
+            <!-- <div class="board">
                 <img src="img/board.jpg" alt="board">
-            </div>
-            <div class="blue-piece">
+            </div> -->
+            <!-- <div class="blue-piece">
                 <img src="img/bluePiece.png" alt="blue">
-            </div>
+            </div> -->
         </section>
-        <section class="dice-container">
-            <div class="dice d4">
-                <img src="img/dice4.png" alt="d4">
-            </div>
-            <div class="dice d6">
-                <img src="img/dice6.png" alt="d6">
-            </div class="dice d4">
-            <div class="dice d8">
-                <img src="img/dice8.png" alt="d8">
-            </div>
-            <div class="dice d10">
-                <img src="img/dice10.png" alt="d10">
-            </div>
-            <div class="dice d20">
-                <img src="img/dice20.png" alt="d20">
-            </div>
-        </section>
-        <section class="results">
-            <h2>Rolls</h2>
-            <h3 class="diceResult4"></h3>
-            <h3 class="diceResult6"></h3>
-            <h3 class="diceResult8"></h3>
-            <h3 class="diceResult10"></h3>
-            <h3 class="diceResult20"></h3>
-        
+        <div class="dice-split">
+            <section class="dice-container">
+                <div class="dice d4">
+                    <img src="img/dice4.png" alt="d4">
+                </div>
+                <div class="dice d6">
+                    <img src="img/dice6.png" alt="d6">
+                </div class="dice d4">
+                <div class="dice d8">
+                    <img src="img/dice8.png" alt="d8">
+                </div>
+                <div class="dice d10">
+                    <img src="img/dice10.png" alt="d10">
+                </div>
+                <div class="dice d20">
+                    <img src="img/dice20.png" alt="d20">
+                </div>
+            </section>
+            <section class="results">
+                <h2>Rolls</h2>
+                <ul class="roll-results">
+                </ul>
 
-        </section>
+            </section>
+        </div>
 
-        
-        <!-- <section class="dice-container">
-            <div id="dice" class="dice">
-                <div class="front"></div>
-                <div class="back"></div>
-                <div class="right"></div>
-                <div class="left"></div>
-                <div class="top"></div>
-                <div class="bottom"></div>
-            </div>
-            <div class="place-holder">
-                <img src="img/fivedice.png" alt="square-di" width="100" height="100">
-            </div>
-        </section>
-        
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>">
-	    </script> -->
+        <script src="js/Howler/howler.min.js"></script>
         <script src="js/index.js"></script>
     </body>
     </html>
