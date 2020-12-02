@@ -9,17 +9,13 @@ let dice10 = document.querySelector('.d10')
 let dice20 = document.querySelector('.d20')
 let diceImages = document.querySelectorAll('.dice img')
 let yaDumbName = document.querySelector('#name')
-
+let socket = io('http://circuslabs.net:20202');
 
 yaDumbName.addEventListener('keydown', function(e) {
     if (e.key === 'Enter') e.preventDefault()
 })
 
-//submit name inside JS: document write inside .result section
 
-//Dice rolls inside .result section
-// getElementByID
-//"element".innerHtml()
 let rollDice = function(sides){
     return Math.ceil(Math.random()* sides)
 }
@@ -27,11 +23,6 @@ let rollDice = function(sides){
 dice4.addEventListener('click', function(){
     console.log('dice4')
    
-
-    // rotate image every time  its clicked
-    // diceImages.forEach(function(diceImage) {
-    //    diceImage.classList.add('animation')
-    // })
 
     this.classList.add('animation')
     setTimeout(() => {
@@ -43,12 +34,17 @@ dice4.addEventListener('click', function(){
         });
         
         sound.play()
-    
-    let newResultLI = document.createElement('li')
-    newResultLI.classList.add('diceResult4')
-    newResultLI.innerHTML= yaDumbName.value + ' rolled a ' + rollDice(4)
-    rollResults.insertBefore(newResultLI, rollResults.firstChild)
 
+
+
+    // server
+
+    socket.emit('request roll', {
+        count: 1,
+        faces: 4,
+        name: yaDumbName.value,
+    });
+    
 })
 
 
@@ -62,14 +58,20 @@ dice6.addEventListener('click', function(){
 
     var sound = new Howl({
         src: ['js/roll.wav']
-        });
+    });
         
-        sound.play()
+    sound.play()
 
-    let newResultLI = document.createElement('li')
-    newResultLI.classList.add('diceResult6')
-    newResultLI.innerHTML= yaDumbName.value + ' rolled a ' + rollDice(6)
-    rollResults.insertBefore(newResultLI, rollResults.firstChild)
+
+    // server
+
+    socket.emit('request roll', {
+        count: 1,
+        faces: 6,
+        name: yaDumbName.value,
+    });
+
+   
 
 })
 
@@ -91,10 +93,14 @@ dice8.addEventListener('click', function(){
         
         sound.play()
 
-    let newResultLI = document.createElement('li')
-    newResultLI.classList.add('diceResult8')
-    newResultLI.innerHTML= yaDumbName.value + ' rolled a ' + rollDice(8)
-    rollResults.insertBefore(newResultLI, rollResults.firstChild)
+
+    //server
+    socket.emit('request roll', {
+        count: 1,
+        faces: 8,
+        name: yaDumbName.value,
+    });
+
 })
 
 
@@ -112,10 +118,14 @@ dice10.addEventListener('click', function(){
         
         sound.play()
 
-    let newResultLI = document.createElement('li')
-    newResultLI.classList.add('diceResult10')
-    newResultLI.innerHTML= yaDumbName.value + ' rolled a ' + rollDice(10)
-    rollResults.insertBefore(newResultLI, rollResults.firstChild)
+    //server
+      socket.emit('request roll', {
+        count: 1,
+        faces: 10,
+        name: yaDumbName.value,
+    });
+
+
 })
 
 
@@ -132,14 +142,54 @@ dice20.addEventListener('click', function(){
         });
         
         sound.play()
+
+    //server
+    socket.emit('request roll', {
+        count: 1,
+        faces: 20,
+        name: yaDumbName.value,
+    });
     
 
-    let newResultLI = document.createElement('li')
-    newResultLI.classList.add('diceResult20')
-    newResultLI.innerHTML= yaDumbName.value + ' rolled a ' + rollDice(20)
-    rollResults.insertBefore(newResultLI, rollResults.firstChild)
 
 })
+
+
+let dumbPeopleRolls = function(data){
+    console.log('the server sent a "rolled" event', data)
+    console.log(data.name)
+    let newResultLI = document.createElement('li')
+    newResultLI.classList.add('diceResult20')
+    newResultLI.innerHTML= data.name + ' rolled a ' + data.rolls[0]
+    rollResults.insertBefore(newResultLI, rollResults.firstChild)
+}
+socket.on('rolled', dumbPeopleRolls);
+// console.log(dumbPeopleRolls)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let dumbPeopleRolls = function(){
+//   let newResultLI = document.createElement('li')
+//     newResultLI.classList.add('diceResult20')
+//     newResultLI.innerHTML= yaDumbName.value + ' rolled a ' + rollDice(20)
+//     rollResults.insertBefore(newResultLI, rollResults.firstChild)
+// }
+
+// socket.on('rolled', function (dumbPeopleRolls) {
+// 	console.log(dumbPeopleRolls);
+// });
 
 
 
