@@ -159,6 +159,7 @@ let dumbPeopleRolls = function(data){
     console.log('the server sent a "rolled" event', data)
     console.log(data.name)
     let newResultLI = document.createElement('li')
+    // if (dice4)
     newResultLI.classList.add('diceResult20')
     newResultLI.innerHTML= data.name + ' rolled a ' + data.rolls[0]
     rollResults.insertBefore(newResultLI, rollResults.firstChild)
